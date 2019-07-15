@@ -58,5 +58,37 @@ def eg1(list=None):
     list.append(1)
     return list
 
+
 print(eg1())
 print(eg1())
+
+
+# 可变参数
+def kbch(*numbles):
+    for n in numbles:
+        print(n)
+
+
+# kbch(1, 2, 3, 4, 5, 6)
+# 如何把集合变成可变参数
+nums = [1, 3, 5, 7, 9]
+
+
+# kbch(*nums)
+
+
+# 关键字参数
+
+def gjz(name, age, **data):
+    print('name{0},age:{1} data:{2}'.format(name, age, data))
+
+
+gjz('tian', 'xiao', a='a', b='b')
+
+# 关键字参数只能填city或者sex
+def gjz2(name,age,*,city,sex):
+    print('data:'+ city+"  sex:"+sex)
+
+gjz2('tian',1,city='beijing',sex='nan')
+
+# 方法参数申明顺序   必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
